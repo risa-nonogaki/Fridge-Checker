@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewItemsCell" rowHeight="60" id="KGk-i7-Jjw" customClass="ChangeInItemsTableViewCell" customModule="Fridge" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OdI-CL-Dxh">
+                        <rect key="frame" x="54" y="15" width="141" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="141" id="oja-b0-aMI"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cameraPlaceHolder.png" translatesAutoresizingMaskIntoConstraints="NO" id="KO6-xN-PVn">
+                        <rect key="frame" x="9" y="10" width="40" height="40"/>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="KO6-xN-PVn" secondAttribute="height" multiplier="1:1" id="Eta-Mj-FIX"/>
+                            <constraint firstAttribute="height" constant="40" id="h10-dF-oqT"/>
+                        </constraints>
+                    </imageView>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="単位" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y4A-Vn-p5X">
+                        <rect key="frame" x="340" y="14" width="30" height="33"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="VvN-LK-4ei"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="カテゴリ" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zdM-z7-xkV">
+                        <rect key="frame" x="202" y="15" width="83" height="35"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="83" id="Ufb-Qg-Sve"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KpF-GA-QR3">
+                        <rect key="frame" x="200" y="0.0" width="0.5" height="60"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="0.5" id="HpN-en-GzR"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C2l-Tp-781">
+                        <rect key="frame" x="285" y="0.0" width="0.5" height="60"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="0.5" id="sxi-Xs-KRR"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OHF-Nd-DDU">
+                        <rect key="frame" x="9" y="10" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="OHF-Nd-DDU" secondAttribute="height" multiplier="1:1" id="kVh-q8-g4L"/>
+                        </constraints>
+                        <connections>
+                            <action selector="pickePhotoWithButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="sLs-7A-4NH"/>
+                        </connections>
+                    </button>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="個数" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zhp-zm-cfh" customClass="DoneTextField" customModule="Fridge" customModuleProvider="target">
+                        <rect key="frame" x="290" y="14" width="42" height="34"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="42" id="Uvi-iZ-XW4"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y5m-RS-NQ7">
+                        <rect key="frame" x="378" y="17" width="30" height="28"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="UnZ-5m-lZX"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <state key="normal" title="削除"/>
+                        <connections>
+                            <action selector="deleteButtonWithButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ho8-vo-Ufy"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="y5m-RS-NQ7" secondAttribute="bottom" constant="15" id="08c-cb-9Yt"/>
+                    <constraint firstItem="zdM-z7-xkV" firstAttribute="leading" secondItem="KpF-GA-QR3" secondAttribute="trailing" constant="1.5" id="3RE-Uv-m9c"/>
+                    <constraint firstItem="KO6-xN-PVn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="4Sb-lR-H71"/>
+                    <constraint firstAttribute="bottom" secondItem="zdM-z7-xkV" secondAttribute="bottom" constant="10" id="5QR-cy-hMK"/>
+                    <constraint firstItem="Y4A-Vn-p5X" firstAttribute="leading" secondItem="zhp-zm-cfh" secondAttribute="trailing" constant="8" id="5aT-hL-hRr"/>
+                    <constraint firstAttribute="bottom" secondItem="KpF-GA-QR3" secondAttribute="bottom" id="7ZI-BU-gNw"/>
+                    <constraint firstAttribute="bottom" secondItem="C2l-Tp-781" secondAttribute="bottom" id="8Tt-xQ-8UB"/>
+                    <constraint firstItem="OdI-CL-Dxh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="9nZ-vL-ztM"/>
+                    <constraint firstItem="OdI-CL-Dxh" firstAttribute="leading" secondItem="KO6-xN-PVn" secondAttribute="trailing" constant="5" id="GJP-al-0VO"/>
+                    <constraint firstAttribute="bottom" secondItem="KO6-xN-PVn" secondAttribute="bottom" constant="10" id="Jl5-FN-isO"/>
+                    <constraint firstItem="KO6-xN-PVn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="9" id="Owi-aw-jTO"/>
+                    <constraint firstAttribute="bottom" secondItem="OdI-CL-Dxh" secondAttribute="bottom" constant="15" id="Paw-Tu-nu0"/>
+                    <constraint firstItem="zdM-z7-xkV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="SMi-Ot-sqs"/>
+                    <constraint firstItem="zhp-zm-cfh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="TeX-t9-ElT"/>
+                    <constraint firstAttribute="bottom" secondItem="Y4A-Vn-p5X" secondAttribute="bottom" constant="13" id="ToO-GC-gas"/>
+                    <constraint firstItem="y5m-RS-NQ7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="17" id="VA7-6r-9p9"/>
+                    <constraint firstItem="Y4A-Vn-p5X" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="c5t-LN-XUw"/>
+                    <constraint firstAttribute="bottom" secondItem="zhp-zm-cfh" secondAttribute="bottom" constant="12" id="d9Q-fl-05O"/>
+                    <constraint firstItem="KpF-GA-QR3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="etU-KX-kzZ"/>
+                    <constraint firstItem="KpF-GA-QR3" firstAttribute="leading" secondItem="OdI-CL-Dxh" secondAttribute="trailing" constant="5" id="fou-cL-P8P"/>
+                    <constraint firstItem="zhp-zm-cfh" firstAttribute="leading" secondItem="C2l-Tp-781" secondAttribute="trailing" constant="4.5" id="k48-87-faF"/>
+                    <constraint firstItem="OHF-Nd-DDU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="lz0-nh-q7d"/>
+                    <constraint firstItem="OHF-Nd-DDU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="9" id="qbI-p4-IXU"/>
+                    <constraint firstItem="y5m-RS-NQ7" firstAttribute="leading" secondItem="Y4A-Vn-p5X" secondAttribute="trailing" constant="8" id="sGj-fC-Qal"/>
+                    <constraint firstItem="C2l-Tp-781" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="tjB-oE-aW3"/>
+                    <constraint firstAttribute="bottom" secondItem="OHF-Nd-DDU" secondAttribute="bottom" constant="10" id="xQP-WQ-Bkp"/>
+                    <constraint firstItem="C2l-Tp-781" firstAttribute="leading" secondItem="zdM-z7-xkV" secondAttribute="trailing" id="xji-Yf-6ol"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="categoryTextField" destination="zdM-z7-xkV" id="buQ-28-CxA"/>
+                <outlet property="itemImageView" destination="KO6-xN-PVn" id="bBr-YH-zps"/>
+                <outlet property="itemNameLabel" destination="OdI-CL-Dxh" id="fkd-QG-ypS"/>
+                <outlet property="quantityTextField" destination="zhp-zm-cfh" id="Kt5-oH-01V"/>
+                <outlet property="unitTextField" destination="Y4A-Vn-p5X" id="yVF-nq-QPH"/>
+            </connections>
+            <point key="canvasLocation" x="221.73913043478262" y="136.60714285714286"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="cameraPlaceHolder.png" width="500" height="500"/>
+    </resources>
+</document>

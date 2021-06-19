@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FridgeCell" id="gTV-IL-0wX" customClass="FridgeCollectionViewCell" customModule="Fridge" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="138" height="145"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="138" height="145"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uz3-XD-ZbH">
+                        <rect key="frame" x="7" y="117" width="75" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="IWI-xq-6d6"/>
+                            <constraint firstAttribute="width" constant="75" id="s0h-eh-sVn"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C6o-df-a3d">
+                        <rect key="frame" x="90" y="117" width="41" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="SS1-dV-Tz8"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cameraPlaceHolder.png" translatesAutoresizingMaskIntoConstraints="NO" id="KPc-M0-rte">
+                        <rect key="frame" x="14" y="2" width="110" height="110"/>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="110" id="mwD-oq-owY"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="C6o-df-a3d" secondAttribute="trailing" constant="7" id="1zO-QD-uBY"/>
+                <constraint firstItem="C6o-df-a3d" firstAttribute="top" secondItem="KPc-M0-rte" secondAttribute="bottom" constant="5" id="33B-d6-7zJ"/>
+                <constraint firstAttribute="trailing" secondItem="KPc-M0-rte" secondAttribute="trailing" constant="14" id="EA6-af-a07"/>
+                <constraint firstItem="KPc-M0-rte" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="2" id="GAN-Au-vx5"/>
+                <constraint firstItem="KPc-M0-rte" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="14" id="HX4-bG-h9f"/>
+                <constraint firstItem="C6o-df-a3d" firstAttribute="leading" secondItem="Uz3-XD-ZbH" secondAttribute="trailing" constant="8" id="Tx7-5H-Juh"/>
+                <constraint firstItem="Uz3-XD-ZbH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="7" id="Uo8-3e-8ib"/>
+                <constraint firstItem="Uz3-XD-ZbH" firstAttribute="top" secondItem="KPc-M0-rte" secondAttribute="bottom" constant="5" id="hvq-hU-753"/>
+            </constraints>
+            <size key="customSize" width="5" height="120"/>
+            <connections>
+                <outlet property="itemImageView" destination="KPc-M0-rte" id="qDY-Xp-E8I"/>
+                <outlet property="itemNameLabel" destination="Uz3-XD-ZbH" id="87K-iA-tJg"/>
+                <outlet property="quantityLabel" destination="C6o-df-a3d" id="Ktd-Sb-TLX"/>
+            </connections>
+            <point key="canvasLocation" x="104.34782608695653" y="104.79910714285714"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="cameraPlaceHolder.png" width="500" height="500"/>
+    </resources>
+</document>

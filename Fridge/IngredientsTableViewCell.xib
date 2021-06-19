@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="IngredientsCell" rowHeight="50" id="KGk-i7-Jjw" customClass="IngredientsTableViewCell" customModule="Fridge" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="単位" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tke-Vb-qn4">
+                        <rect key="frame" x="328" y="18" width="46" height="34"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="46" id="aFL-KI-hlC"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="個数" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vx9-Ov-Cky" customClass="DoneTextField" customModule="Fridge" customModuleProvider="target">
+                        <rect key="frame" x="257" y="18" width="63" height="34"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="63" id="7YF-ko-CJW"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jPO-RP-WqZ">
+                        <rect key="frame" x="240" y="0.0" width="0.5" height="70"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="0.5" id="Nov-cm-rSO"/>
+                        </constraints>
+                    </view>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="材料名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="29L-Il-MHu" customClass="DoneTextField" customModule="Fridge" customModuleProvider="target">
+                        <rect key="frame" x="8" y="18" width="201" height="34"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="201" id="91E-AP-ru5"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znb-hq-Kkz">
+                        <rect key="frame" x="382" y="0.0" width="31" height="70"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="31" id="bcP-lZ-bmZ"/>
+                        </constraints>
+                        <state key="normal" image="xmark" catalog="system">
+                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default" weight="heavy"/>
+                        </state>
+                        <connections>
+                            <action selector="deleteCellWithButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="NxX-6g-hJk"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="jPO-RP-WqZ" secondAttribute="bottom" id="2R6-d5-vrN"/>
+                    <constraint firstItem="vx9-Ov-Cky" firstAttribute="leading" secondItem="jPO-RP-WqZ" secondAttribute="trailing" constant="16.5" id="2mP-yN-eLp"/>
+                    <constraint firstAttribute="bottom" secondItem="29L-Il-MHu" secondAttribute="bottom" constant="18" id="8l3-ck-N21"/>
+                    <constraint firstAttribute="bottom" secondItem="tke-Vb-qn4" secondAttribute="bottom" constant="18" id="DlT-gQ-vi9"/>
+                    <constraint firstItem="znb-hq-Kkz" firstAttribute="leading" secondItem="tke-Vb-qn4" secondAttribute="trailing" constant="8" id="KLV-rX-D4n"/>
+                    <constraint firstItem="jPO-RP-WqZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Oy8-Po-UKh"/>
+                    <constraint firstItem="vx9-Ov-Cky" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="18" id="QjN-gs-Qxb"/>
+                    <constraint firstAttribute="bottom" secondItem="znb-hq-Kkz" secondAttribute="bottom" id="V9y-e7-gtk"/>
+                    <constraint firstItem="29L-Il-MHu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="Z4f-hI-arL"/>
+                    <constraint firstItem="jPO-RP-WqZ" firstAttribute="leading" secondItem="29L-Il-MHu" secondAttribute="trailing" constant="31" id="ZhO-r9-Xi2"/>
+                    <constraint firstAttribute="bottom" secondItem="vx9-Ov-Cky" secondAttribute="bottom" constant="18" id="bA6-rH-YnO"/>
+                    <constraint firstItem="tke-Vb-qn4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="18" id="hU4-ai-i6z"/>
+                    <constraint firstItem="29L-Il-MHu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="18" id="imk-Ry-4OF"/>
+                    <constraint firstItem="znb-hq-Kkz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="qCA-FB-NSQ"/>
+                    <constraint firstItem="tke-Vb-qn4" firstAttribute="leading" secondItem="vx9-Ov-Cky" secondAttribute="trailing" constant="8" id="wA8-iO-oc6"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="ingredientsTextField" destination="29L-Il-MHu" id="VRS-1t-kv5"/>
+                <outlet property="quantityTextField" destination="vx9-Ov-Cky" id="tbl-GQ-wNy"/>
+                <outlet property="unitTextField" destination="tke-Vb-qn4" id="mLq-ol-VUT"/>
+            </connections>
+            <point key="canvasLocation" x="163.768115942029" y="70.3125"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+    </resources>
+</document>
